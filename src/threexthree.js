@@ -114,7 +114,7 @@ function guided3x3(){
   document.getElementById("guided3x3").style.backgroundColor="#3AA655";
   console.log("Guided ON");
   if(turn == "X")
-  highlight(bestSPOT3(turn),turn);
+    highlight(bestSPOT3(turn),turn);
 }
 
 //updateScore function.................................................................................
