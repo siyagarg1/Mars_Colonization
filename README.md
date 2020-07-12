@@ -13,4 +13,4 @@ email-id:      atinvento@gmail.com    |   rajendraprasath01@hotmail.com
 
 ## Flow Chart :
 
-![flow_chart](img/(TicTacToe)Flow Chart.png)
+![flow_chart](https://github.com/EPCDECRY/Mars_Colonization/blob/master/img/(TicTacToe)Flow%20Chart.png)
