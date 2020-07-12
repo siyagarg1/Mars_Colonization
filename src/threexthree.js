@@ -96,12 +96,15 @@ function guidedp1(){
   document.getElementById("guidedp1").innerText= "Guided (P1) : ON";
   document.getElementById("guidedp1").style.backgroundColor="#3AA655";
   console.log(guidep1);
+  highlight(bestSPOT3(turn),turn);
 }
 function guidedp2(){
   guidep2 = 1;
   document.getElementById("guidedp2").innerText= "Guided (P2) : ON";
   document.getElementById("guidedp2").style.backgroundColor="#3AA655";
   console.log(guidep2);
+  if(turn == "O")
+    highlight(bestSPOT3(turn),turn);
 }
 
 //guidedOnClick function...............................................................................
@@ -110,6 +113,8 @@ function guided3x3(){
   document.getElementById("guided3x3").innerText= "Guided : ON";
   document.getElementById("guided3x3").style.backgroundColor="#3AA655";
   console.log("Guided ON");
+  if(turn == "X")
+  highlight(bestSPOT3(turn),turn);
 }
 
 //updateScore function.................................................................................
@@ -185,7 +190,6 @@ function startGame3(){
   document.getElementById("guidedp1").style.backgroundColor="aquamarine";
   document.getElementById("guidedp2").innerText= "Guided(P2) : OFF";
   document.getElementById("guidedp2").style.backgroundColor="aquamarine";
-
   origBoard = Array.from(Array(9).keys());
   for(let i=0;i < cells.length;i++){
       cells[i].innerText='';
@@ -210,12 +214,8 @@ function dehighlight(){
 
 //turnClick function.................................................................................
 function turnClick(square){
-  if(blocksPressed>0 && (guided == 1 || guidep2==1))
+  if(guided == 1 || guidep2==1 || guidep1==1)
     dehighlight();
-  else if(blocksPressed>1 && guidep1==1)
-    dehighlight();
-  console.log(origBoard);
-
   if(playtype==2){
     click(square.target.id,turn);
     checkTie();
@@ -231,13 +231,12 @@ function turnClick(square){
         turn="X";
         symb_color = colorX;
         if(!gameEnd){
-          if(guidep1 == 1 && blocksPressed>1){
-            highlight(bestSPOT3("X"),turn);}
+          if(guidep1 == 1 && blocksPressed>1)
+            highlight(bestSPOT3("X"),turn);
         }
     }
    
   }
-
   else{
     symb_color = colorX;
     click(square.target.id,human);
