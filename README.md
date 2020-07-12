@@ -13,7 +13,9 @@ Team Name:<b> EPCDECRY </b>
 | Rajendraprasath     | rajendraprasath01@hotmail.com|
 
 &nbsp;
-#### Click to visit website : http://marscolepcdecry.s3-website.ap-south-1.amazonaws.com/  
+#### Click to visit website
+### On AWS   :http://marscolepcdecry.s3-website.ap-south-1.amazonaws.com/  
+### On Azure :https://marscolepcdecry.z29.web.core.windows.net/
 &nbsp;
 &nbsp;
 ### Flow Chart of the Game:
