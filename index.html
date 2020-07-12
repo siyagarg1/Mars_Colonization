@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <meta charset="UTF-8"/>
+        <title>Tic Tac Toe</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="icon" href="img/EPC2.png" sizes="32x32" type="image/png">
+    </head>
+
+    <body>
+            
+<!-- heading row.......................................................................-->
+    <div class="row">
+        <div class="col-12" id="header">
+            <h1>Tic - Tac - Toe</h1>
+        </div>
+    </div>
+<!-- Message Box for 3x3 -->
+    <div class="Message">
+        <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+        <strong>Message  . . . .</strong><br>Hello fellow CrewMates,<br>Our Mission to colonize Mars is off with a good start.<br>Try out the 3x3 Tic-Tac-Toe to keep yourself entertained. Play with your fellow crew members by clicking <strong id="important">P v P</strong> Also try playing against the AI using <strong id="important">P v E</strong><br>Tired of lossing, try making the AI more dumm by Changing Depths or seek help from the AI using <strong id="important">Guided Mode</strong>.<br>Use <strong id="important">View Timeline</strong> to view your moves.<br>Have Fun Guys...
+    </div>
+<!-- Board3x3 Box -->
+    <div class="board3x3">
+<!-- row1....................................................................... -->
+        <div class="row ">
+            <div class="col-12" id="row1">
+                <div id=grid3x3>
+                    <h2>3 X 3</h2>
+                    <table id="table3">
+                        <tr>
+                            <td class="cell" id="0"></td>
+                            <td class="cell" id="1"></td>
+                            <td class="cell" id="2"></td>
+                        </tr>
+                        <tr>
+                            <td class="cell" id="3"></td>
+                            <td class="cell" id="4"></td>
+                            <td class="cell" id="5"></td>
+                        </tr>
+                        <tr>
+                            <td class="cell" id="6"></td>
+                            <td class="cell" id="7"></td>
+                            <td class="cell" id="8"></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+                
+<!-- row7.......................................................................-->
+        <div class="row">
+            <div class="col-12" id="row7">
+               <p id="score3">Player1: 0    Tie: 0  Player2: 0</p>
+               <ul id="guidedp1p2">
+                   <li onclick="guidedp1()" id=guidedp1>Guided (P1)</li>
+                   <li onclick="guidedp2()" id=guidedp2>Guided (P2)</li>
+                </ul>
+            </div>
+        </div>               
+<!-- row2.......................................................................-->
+        <div class="row">
+            <div class="col-12" id="row2">
+                    <ul id="buttons3x3">
+                    <!-- li for 3x3 buttons-->
+                        <li onclick="twoPlayers3x3()" id=pvp3x3>P v P</li>
+                        <li onclick="aiPlayer3x3()" id=pve3x3>P v E</li>
+                        <li onclick="guided3x3()" id=guided3x3>Guided</li>
+                        <li onclick="viewTimeline3x3()" id=timeline3>View Timeline</li>
+                    </ul>
+            </div>
+        </div>
+<!-- row9........................................................................-->
+        <div class="row">
+            <div class="col" id="row9">
+                <ul id="depth">
+                    <!-- Depth for 3x3 buttons-->
+                        <li id="d0">AI lvl :</li>
+                        <li id=d1>1</li>
+                        <li id=d2>2</li>
+                        <li id=d3>3</li>
+                        <li id=d4>4</li>
+                        <li id=unlimited>Unlimited</li>
+                </ul>
+            </div>
+        </div>
+<!-- row3.......................................................................-->
+        <div class="row">
+            <div class="col" id="row3">
+                    <div class="ResetButton"><button onclick="startGame3()" id="reset">Replay</button></div>
+            </div>
+        </div>
+    </div>
+
+<!-- Message Box for 4x4 -->
+    <div class="Message2">
+        <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+        Hello fellow CrewMates,<br>Try out the 4x4 Tic-Tac-Toe game.<br>Play with your fellow crew members by clicking <strong id="important">P v P</strong>,<br>Also try playing against the AI using <strong id="important">P v E</strong>.<br>Use <strong id="important">View Timeline</strong> to view your moves.<br>Have Fun Guys...
+    </div>
+
+
+<!-- Board4x4 Box -->
+<div class="board4x4">
+<!-- row4.......................................................................-->
+<!-- Creating table of 4x4 -->
+        <div class="row">
+            <div class="col-12" id="row4">
+                <div id=grid4x4>
+                    <h2>4 X 4</h2>
+                    <table id="table4">
+                        <tr>
+                            <td class="block" id="9"></td>
+                            <td class="block" id="10"></td>
+                            <td class="block" id="11"></td>
+                            <td class="block" id="12"></td>
+                        </tr>
+                        <tr>
+                            <td class="block" id="13"></td>
+                            <td class="block" id="14"></td>
+                            <td class="block" id="15"></td>
+                            <td class="block" id="16"></td>
+                        </tr>
+                        <tr>
+                            <td class="block" id="17"></td>
+                            <td class="block" id="18"></td>
+                            <td class="block" id="19"></td>
+                            <td class="block" id="20"></td>
+                        </tr>
+                        <tr>
+                            <td class="block" id="21"></td>
+                            <td class="block" id="22"></td>
+                            <td class="block" id="23"></td>
+                            <td class="block" id="24"></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+<!-- row8.......................................................................-->
+        <div class="row">
+            <div class="col-12" id="row8">
+            <p id="score4">Player1: 0    Tie: 0  Player2: 0</p>
+            </div>
+        </div>   
+
+<!-- row5....................................................................... -->
+        <div class="row">
+            <div class="col-12" id="row5">
+                    <ul id="buttons4x4">
+                    <!-- li for 4x4 buttons -->
+                        <li onclick="twoPlayers4x4()" id=pvp4x4>P v P</li>
+                        <li onclick="aiPlayer4x4()" id=pve4x4>P v E</li>
+                        <li onclick="viewTimeline4x4()" id=timeline4>View Timeline</li>
+                    </ul>
+            </div>
+        </div>
+
+        
+
+<!-- row6....................................................................... -->
+        <div class="row">
+            <div class="col" id="row6">
+                    <div class="ResetButton"><button onclick="startGame4()" id="reset">Replay</button></div>
+            </div>
+        </div>
+
+</div>        
+
+<!-- javascript files.......................................................................-->
+        <script src="src/threexthree.js"></script>
+        <script src="src/fourxfour.js"></script>
+        <script src="src/aiminimax3.js"></script>
+        <script src="src/aiminimax4.js"></script>
+    
+    
+</body>
+
+    <footer>
+        <a href="https://github.com/EPCDECRY/EPCDECRY.github.io">View On Github</a>
+        <p id="creators">Creators: Rohit & Rajendraprasath</p>
+        &copy;EPCDECRY
+    </footer>
+</html>
